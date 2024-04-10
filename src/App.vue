@@ -1,23 +1,18 @@
-<script></script>
+<script>
+  import AppHeader from "./components/AppHeader.vue"
+  import AppFooter from "./components/AppFooter.vue"
+  export default {
+    components: {
+      AppHeader,
+      AppFooter,
+    }
+  }
+</script>
 
 <template>
-  <header class="page-header">
-    <nav class="container">
-      <div class="row">
-        <ul class="flex">
-          <li>Donna</li>
-          <li>Uomo</li>
-          <li>Bambini</li>
-        </ul>
-        <img class="logo-header" src="./images/img/boolean-logo.png" alt="">
-        <ul class="flex">
-          <li>&hearts;</li>
-          <li>&hearts;</li>
-          <li>&hearts;</li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <div>
+    <AppHeader />
+  </div>
 
   <main class="page-content">
     <div class="section">
@@ -122,15 +117,9 @@
     </div>
   </main>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <p>Booleando s.r.l</p>
-        <p>Lorem, ipsum dolor.</p>
-        <h4>Trovaci anche su</h4>
-      </div>
-    </div>
-  </footer>
+  <div>
+    <AppFooter />
+  </div>
 </template>
 
 <style>
