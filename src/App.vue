@@ -1,12 +1,12 @@
 <script>
-  import AppHeader from "./components/AppHeader.vue"
-  import AppFooter from "./components/AppFooter.vue"
-  export default {
-    components: {
-      AppHeader,
-      AppFooter,
-    }
-  }
+import AppHeader from "./components/AppHeader.vue"
+import AppFooter from "./components/AppFooter.vue"
+export default {
+  components: {
+    AppHeader,
+    AppFooter,
+  },
+}
 </script>
 
 <template>
@@ -21,12 +21,12 @@
           <div class="col-4">
             <div class="card">
               <div class="card-header">
-                <img src="./images/img/1.webp" alt="">
+                <img src="/img/1.webp" alt="">
                 <span class="price-badge">-50 %</span>
                 <span class="tag-badge">Sostenibilità</span>
                 <span class="heart-badge">&hearts;</span>
                 <div class="overlay">
-                  <img src="./images/img/1b.webp" alt="">
+                  <img src="/img/1b.webp" alt="">
                 </div>
               </div>
               <div class="card-body">
@@ -39,11 +39,11 @@
           <div class="col-4">
             <div class="card product">
               <div class="card-header">
-                <img src="./images/img/2.webp" alt="">
+                <img src="/img/2.webp" alt="">
                 <span class="price-badge">-30 %</span>
                 <span class="heart-badge">&hearts;</span>
                 <div class="overlay">
-                  <img src="./images/img/2b.webp" alt="">
+                  <img src="/img/2b.webp" alt="">
                 </div>
               </div>
               <div class="card-body">
@@ -56,7 +56,7 @@
           <div class="col-4">
             <div class="card product">
               <div class="card-header">
-                <img src="./images/img/3.webp" alt="">
+                <img src="/img/3.webp" alt="">
                 <span class="price-badge">-30 %</span>
                 <span class="heart-badge">&hearts;</span>
               </div>
@@ -70,11 +70,11 @@
           <div class="col-4">
             <div class="card product">
               <div class="card-header">
-                <img src="./images/img/4.webp" alt="">
+                <img src="/img/4.webp" alt="">
                 <span class="price-badge">-50 %</span>
                 <span class="tag-badge">Sostenibilità</span>
                 <span class="heart-badge">&hearts;</span>
-                <div class="overlay"><img src="./images/img/4b.webp" alt=""></div>
+                <div class="overlay"><img src="/img/4b.webp" alt=""></div>
               </div>
               <div class="card-body">
                 <p>Levi's</p>
@@ -86,9 +86,9 @@
           <div class="col-4">
             <div class="card product">
               <div class="card-header">
-                <img src="./images/img/5.webp" alt="">
+                <img src="/img/5.webp" alt="">
                 <span class="heart-badge">&hearts;</span>
-                <div class="overlay"><img src="./images/img/5b.webp" alt=""></div>
+                <div class="overlay"><img src="/img/5b.webp" alt=""></div>
               </div>
               <div class="card-body">
                 <p>Maya Deluxe</p>
@@ -100,10 +100,10 @@
           <div class="col-4">
             <div class="card product">
               <div class="card-header">
-                <img src="./images/img/6.webp" alt="">
+                <img src="/img/6.webp" alt="">
                 <span class="tag-badge only">Sostenibilità</span>
                 <span class="heart-badge">&hearts;</span>
-                <div class="overlay"><img src="./images/img/6b.webp" alt=""></div>
+                <div class="overlay"><img src="/img/6b.webp" alt=""></div>
               </div>
               <div class="card-body">
                 <p>Esprit</p>
@@ -122,172 +122,102 @@
   </div>
 </template>
 
-<style>
-/* RESET */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-img {
-	max-width: 100%;
-}
-
-a {
-	text-decoration: none;
-	color: currentColor;
-}
-
-menu,
-ul,
-ol {
-	list-style: none;
-}
-
-/* LAYOUT */
-
-.container {
-	max-width: 1024px;
-	margin: 0 auto;
-	padding: 0 24px;
-}
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.col-4 {
-	width: calc(4 * 100% / 12);
-    padding-top: 30px; 
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
-.col-50 {
-    width: calc(100 / 2);
-    display: flex;
-    justify-content: space-between;
-}
-
-.row ul {
-    gap: 10px;
-}
+<style lang="scss">
+@use "./style/general";
 
 /* STYLE */
 
 .page-header {
-    background-color: #FF6801;
-    color: white;
+  background-color: #FF6801;
+  color: white;
 }
 
 .page-header .row {
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo-header {
-    height: 25px;
+  height: 25px;
 }
 
 .red-price {
-    display: inline-block;
-    color: red;
-    padding-right: 4px;
+  display: inline-block;
+  color: red;
+  padding-right: 4px;
 }
 
 .before-price {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .card-header {
-    position: relative;
+  position: relative;
 }
 
-.card-header > img {
-    display:  block;
+.card-header>img {
+  display: block;
 }
 
-.card-body p,span {
-    font-size: 14px;
+.card-body p,
+span {
+  font-size: 14px;
 }
 
 .card-header .price-badge {
-    position: absolute;
-    bottom: 30px;
+  position: absolute;
+  bottom: 30px;
 }
 
 .card-header .tag-badge {
-    position: absolute;
-    bottom: 30px;
-    left: 45px;
+  position: absolute;
+  bottom: 30px;
+  left: 45px;
 }
 
-.card-header .only{
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
+.card-header .only {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
 }
 
 .card-header .heart-badge {
-    position: absolute;
-    top: 20px;
-    right: 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
 }
 
 .price-badge {
-    background-color: #FF0000;
-    color: white;
-    padding: 0 5px;
-    font-size: 13px;
+  background-color: #FF0000;
+  color: white;
+  padding: 0 5px;
+  font-size: 13px;
 }
 
 .tag-badge {
-    background-color: #008001;
-    color: white;
-    padding: 0 6px;
-    font-size: 13px;
+  background-color: #008001;
+  color: white;
+  padding: 0 6px;
+  font-size: 13px;
 }
 
 .heart-badge {
-    background-color: white;
-    font-size: 20px;
-    padding: 9px;
+  background-color: white;
+  font-size: 20px;
+  padding: 9px;
 }
 
 .card-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: 500ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 500ms;
 }
 
 .card-header:hover .overlay {
-    opacity: 1;
-    z-index: 20;
-}
-
-
-.page-footer {
-    background-color: black;
-    color: white;
-    margin-top: 35px;
-    padding: 15px;
-}
-
-.page-footer .row {
-    justify-content: space-between;
-}
-
-
-
-/* utilities */
-
-.flex {
-    display: flex;
+  opacity: 1;
+  z-index: 20;
 }
 </style>
