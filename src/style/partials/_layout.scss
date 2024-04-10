@@ -1,1 +1,29 @@
 /* tutte le regole di layout (container ecc...) */
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col-4 {
+	width: calc(4 * 100% / 12);
+    padding-top: 30px; 
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.col-50 {
+    width: calc(100 / 2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.row ul {
+    gap: 10px;
+}
