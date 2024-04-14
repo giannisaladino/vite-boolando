@@ -1,9 +1,6 @@
 <script>
 export default {
     data() {
-        return {
-
-        }
     }
 }
 </script>
@@ -17,7 +14,7 @@ export default {
                     <li>Uomo</li>
                     <li>Bambini</li>
                 </ul>
-                <img class="logo-header" src="./images/img/boolean-logo.png" alt="">
+                <img class="logo-header" src="/img/boolean-logo.png" alt="">
                 <ul class="flex">
                     <li>&hearts;</li>
                     <li>&hearts;</li>
@@ -27,3 +24,21 @@ export default {
         </nav>
     </header>
 </template>
+
+<style>
+.page-header {
+    background-color: #FF6801;
+    color: white;
+}
+
+.page-header .row {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-header {
+    height: 25px;
+}
+
+</style>
